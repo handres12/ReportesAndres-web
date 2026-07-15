@@ -1,0 +1,53 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Informes BI — acceso restringido</title>
+<style>
+ body{margin:0;background:#fbfaf7;color:#241f1a;font:15px/1.55 "Segoe UI",system-ui,sans-serif;
+      display:flex;min-height:100vh;align-items:center;justify-content:center}
+ .caja{background:#fff;border:1px solid #e9e2d8;border-left:4px solid #b3232e;border-radius:8px;
+       padding:34px 38px;max-width:400px;width:90%}
+ h1{font-family:Georgia,serif;font-size:1.25rem;margin:0 0 4px}
+ p{color:#7a6f64;font-size:.86rem;margin:0 0 18px}
+ label{display:block;color:#7a6f64;font-size:.78rem;font-weight:700;margin:8px 0 3px}
+ input{width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #e9e2d8;border-radius:6px;
+       font-size:1rem}
+ button{width:100%;background:#b3232e;color:#fff;border:0;border-radius:6px;padding:11px;
+        margin-top:14px;font-weight:700;font-size:.95rem;cursor:pointer}
+ .err{color:#b3232e;font-size:.82rem;margin-top:10px;display:none}
+</style></head><body>
+<div class="caja"><h1>Andrés Carne de Res · Informes BI</h1>
+<p>Acceso restringido. Ingresa tu código de acceso.</p>
+<form id="f"><label for="p">Código de acceso</label><input id="p" type="password" inputmode="numeric"
+ autocomplete="current-password" placeholder="Código" autofocus>
+<button>Entrar</button><div class="err" id="e">Datos incorrectos — intenta de nuevo.</div></form></div>
+<script>
+const PAQUETES=["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"];
+async function descifrar(b64,cred){
+  const raw=Uint8Array.from(atob(b64),c=>c.charCodeAt(0));
+  const salt=raw.slice(0,16),iv=raw.slice(16,28),ct=raw.slice(28);
+  const km=await crypto.subtle.importKey("raw",new TextEncoder().encode(cred),"PBKDF2",false,["deriveKey"]);
+  const k=await crypto.subtle.deriveKey({name:"PBKDF2",salt:salt,iterations:600000,hash:"SHA-256"},
+        km,{name:"AES-GCM",length:256},false,["decrypt"]);
+  const pt=await crypto.subtle.decrypt({name:"AES-GCM",iv:iv},k,ct);
+  return new TextDecoder().decode(pt);
+}
+async function abrirCred(cred){
+  for(const b64 of PAQUETES){
+    try{
+      const html=await descifrar(b64,cred);
+      localStorage.setItem("bi_k",cred);
+      document.open();document.write(html);document.close();
+      return;
+    }catch(_){}
+  }
+  throw new Error("credenciales");
+}
+document.getElementById("f").addEventListener("submit",async ev=>{
+  ev.preventDefault();
+  try{await abrirCred(document.getElementById("p").value);}
+  catch(_){document.getElementById("e").style.display="block";}
+});
+const g=localStorage.getItem("bi_k");
+if(g){abrirCred(g).catch(()=>localStorage.removeItem("bi_k"));}
+</script></body></html>
